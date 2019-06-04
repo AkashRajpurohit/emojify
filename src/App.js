@@ -6,7 +6,8 @@ import EmojiContext from './EmojiContext'
 
 const emojis = emojiJson.reduce((emojis, emoji) => {
   emoji.keywords.split('|').map(keyword => {
-    return (emojis[keyword.trim()] = emoji.char)
+    emojis[keyword.trim()] = emojis[keyword.trim()] || []
+    return emojis[keyword.trim()].push(emoji.char)
   })
   return emojis
 }, {})

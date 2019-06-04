@@ -8,9 +8,9 @@
 
 # Goals
 * [x] Get input text field where users can add text
-* [ ] As the user types, when they press space
+* [x] As the user types, when they press space
   * [x] Replace the emoji word with valid emojis
-  * [ ] Randomise the valid emojis from the list of similar emoji for a word
+  * [x] Randomise the valid emojis from the list of similar emoji for a word
 * [x] Use context API
   * [x] Provider
   * [x] Consumer

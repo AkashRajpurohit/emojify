@@ -8,7 +8,14 @@ const EmojiTextBox = props => {
     const replaceLine = line =>
       line
         .split(' ')
-        .map(word => data.emojis[word.toLowerCase()] || word)
+        .map(word => {
+          if (!word) return ''
+          const emojis = data.emojis[word.toLowerCase()]
+          if (emojis) {
+            return emojis[Math.floor(Math.random() * emojis.length)]
+          }
+          return word
+        })
         .join(' ')
 
     const emojifiedText = text
