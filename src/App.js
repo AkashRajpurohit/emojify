@@ -2,6 +2,7 @@ import emojiJson from 'emoji.json'
 import React from 'react'
 import './App.css'
 import EmojiTextBox from './components/EmojiTextBox'
+import NavBar from './components/NavBar'
 import EmojiContext from './EmojiContext'
 
 const emojis = emojiJson.reduce((emojis, emoji) => {
@@ -15,7 +16,7 @@ const emojis = emojiJson.reduce((emojis, emoji) => {
 function App() {
   return (
     <div className="App">
-      <h1>Emojify</h1>
+      <NavBar />
       <EmojiContext.Provider
         value={{
           emojis: emojis,
