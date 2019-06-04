@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import EmojiContext from '../EmojiContext'
+import React, { useState } from 'react';
+import EmojiContext from '../EmojiContext';
 
 const EmojiTextBox = props => {
   const [text, setText] = useState('')
@@ -37,8 +37,8 @@ const EmojiTextBox = props => {
             placeholder="Start emojifying your text...."
             rows="10"
             spellCheck={false}
-            onKeyUp={({ keyCode }) => {
-              if (keyCode === 32 || keyCode === 13) {
+            onKeyUp={e => {
+              if (e.keyCode === 32 || e.keyCode === 13 || e.keyCode === 0) {
                 emojify(data)
               }
             }}
