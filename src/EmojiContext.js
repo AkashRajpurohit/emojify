@@ -1,9 +1,7 @@
 import React from 'react'
 
 const EmojiContext = React.createContext({
-  emojis: {
-    smile: '😄',
-  },
+  emojis: {},
 })
 
 export default EmojiContext

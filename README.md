@@ -14,6 +14,7 @@
 * [ ] Use context API
   * [x] Provider
   * [x] Consumer
+* [x] Get list of emojis
   
 
 ## Visit my Portfolio
