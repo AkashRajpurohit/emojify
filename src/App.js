@@ -2,6 +2,7 @@ import emojiJson from 'emoji.json'
 import React from 'react'
 import './App.css'
 import EmojiTextBox from './components/EmojiTextBox'
+import Footer from './components/Footer'
 import NavBar from './components/NavBar'
 import EmojiContext from './EmojiContext'
 
@@ -27,6 +28,7 @@ function App() {
           <EmojiTextBox />
         </div>
       </EmojiContext.Provider>
+      <Footer />
     </React.Fragment>
   )
 }
