@@ -2,9 +2,13 @@ import React, { useState } from 'react'
 import EmojiContext from '../EmojiContext'
 
 const EmojiTextBox = props => {
-  const [text, setText] = useState('Hello World smile')
+  const [text, setText] = useState('Hello 🌐!')
   const emojify = data => {
-    console.log(data)
+    const emojifiedText = text
+      .split(' ')
+      .map(word => data.emojis[word.toLowerCase()] || word)
+      .join(' ')
+    setText(emojifiedText)
   }
   return (
     <EmojiContext.Consumer>
@@ -14,8 +18,8 @@ const EmojiTextBox = props => {
           value={text}
           rows="10"
           cols="50"
-          onKeyUp={e => {
-            if (e.keyCode === 32) {
+          onKeyUp={({ keyCode }) => {
+            if (keyCode === 32) {
               emojify(data)
             }
           }}
