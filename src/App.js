@@ -4,7 +4,12 @@ import './App.css'
 import EmojiTextBox from './components/EmojiTextBox'
 import EmojiContext from './EmojiContext'
 
-const emojis = emojiJson
+const emojis = emojiJson.reduce((emojis, emoji) => {
+  emoji.keywords.split('|').map(keyword => {
+    return (emojis[keyword.trim()] = emoji.char)
+  })
+  return emojis
+}, {})
 
 function App() {
   return (
