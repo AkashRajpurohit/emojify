@@ -13,7 +13,7 @@
   * [ ] Randomise the valid emojis from the list of similar emoji for a word
 * [ ] Use context API
   * [ ] Provider
-  * [ ] Consumer
+  * [x] Consumer
   
 
 ## Visit my Portfolio
