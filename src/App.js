@@ -15,16 +15,19 @@ const emojis = emojiJson.reduce((emojis, emoji) => {
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <NavBar />
       <EmojiContext.Provider
         value={{
           emojis: emojis,
         }}
       >
-        <EmojiTextBox />
+        <div className="container mt-4">
+          <h3 className="text-center">Convert Words to Emojis</h3>
+          <EmojiTextBox />
+        </div>
       </EmojiContext.Provider>
-    </div>
+    </React.Fragment>
   )
 }
 

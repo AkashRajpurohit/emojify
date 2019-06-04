@@ -29,19 +29,22 @@ const EmojiTextBox = props => {
   return (
     <EmojiContext.Consumer>
       {data => (
-        <textarea
-          {...props}
-          value={text}
-          placeholder="Start emojifying your text...."
-          rows="10"
-          cols="50"
-          onKeyUp={({ keyCode }) => {
-            if (keyCode === 32 || keyCode === 13) {
-              emojify(data)
-            }
-          }}
-          onChange={e => setText(e.target.value)}
-        />
+        <div className="form-group">
+          <textarea
+            {...props}
+            value={text}
+            className="form-control emoji-textbox"
+            placeholder="Start emojifying your text...."
+            rows="10"
+            spellCheck={false}
+            onKeyUp={({ keyCode }) => {
+              if (keyCode === 32 || keyCode === 13) {
+                emojify(data)
+              }
+            }}
+            onChange={e => setText(e.target.value)}
+          />
+        </div>
       )}
     </EmojiContext.Consumer>
   )
