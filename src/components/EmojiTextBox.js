@@ -37,11 +37,7 @@ const EmojiTextBox = props => {
             placeholder="Start emojifying your text...."
             rows="10"
             spellCheck={false}
-            onKeyUp={e => {
-              if (e.keyCode === 32 || e.keyCode === 13 || e.keyCode === 0) {
-                emojify(data)
-              }
-            }}
+            onKeyUp={() => emojify(data)}
             onChange={e => setText(e.target.value)}
           />
         </div>
